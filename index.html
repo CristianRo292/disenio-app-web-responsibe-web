@@ -2,76 +2,63 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8">
+    <!-- CORRECCIÓN 1: Controla el ancho y el zoom en dispositivos móviles -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/styles.css">
     <title>AgendaWeb · Cristian</title>
   </head>
   <body>
     <header class="portada">
-      <div style="background-color: rgba(0, 0, 0, 0.403);">
-        <h1 style="font-size: 350%; color: #ffffff;">Bienbenido Centro de Actividades de Cristian</h1>
+      <div style="background-color: rgba(0, 0, 0, 0.403); padding: 20px;">
+        <!-- Tipografías en em/rem/vw se adaptan mejor que porcentajes tan altos en mobile -->
+        <h1 style="font-size: 2.5rem; color: #ffffff;">Bienvenido al Centro de Actividades de Cristian</h1>
           <p class="letras-encabezado">
-            Un proyecto perteneciente al tecnologico Superior de Jalisco <br>
-            Que busca desarrollar habilides tecnicas en la elavoracion de Aplicaciones Web  
+            Un proyecto perteneciente al Tecnológico Superior de Jalisco <br>
+            Que busca desarrollar habilidades técnicas en la elaboración de Aplicaciones Web  
           </p>
           <hr>
-
           <p class="letras-encabezado">
-            <strong>Autor:</strong> Cristian Rodriguez Rodriguez |
+            <strong>Autor:</strong> Cristian Rodríguez Rodríguez |
             <strong>Fecha de Edición:</strong> 29/08/2026
           </p>
-    
       </div>
-      </header>
+    </header>
     
-    <hr>
-    <!-- <p style="margin: auto; width: 50%;"><img src="imagenes/pato_de_goma_relleno.jpg" alt="Imagen de pato de goma amigable"></p> -->
     <hr>
     <p class="tarjeta">
-      La vida esta en constante cambio, mantener las cosas organizadas es nuestra mejor ancla y en <i>agenda web</i>,te ayudaremos con eso. <i>Agenda web</i> es un sitio donde podrás encontrar herramientas para <br>
-      programar y consultar tus eventos (o tareas) importantes, ayudándote así a organizar tu vida. <br>
-      Adicional a eso, también podrás encontrar una sección de información relacionada a <b>astronomía y ciencia</b>, porque el conocimiento aclara la mente. 
-
+      En este espacio encontrarás una recopilación de las actividades realizadas por Cristian Rodríguez <br>
+      Durante el desarrollo de la actividad escolar, denominada: "Práctica A4"
     </p>
     <hr width="95%" size="2" class="separcion-entre-pagina">
-     ahora veras una tabla: 
-      <p style="margin: auto; width: 50%;">
-        <table style="width: 50%;">
-        <thead style="border-color: black;">
-          <tr><th>GitHub</th><th>Registro</th><th>Pagina de Error</th></tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><a href="https://github.com/CristianRo292" target="_blank"><img src="imagenes/icnoGithubAdaptado.jpg" alt="Imagen de pato de goma amigable"></a></td>
-            <td><a href="registrar-agenda.html"><img src="imagenes/pato_de_goma_relleno.jpg" alt="Imagen de pato de goma amigable"></a></td>
-            <td><a href="pagina-error.html"><img src="imagenes/ErrorAlgoEstaMal.jpg" alt="Pagina de error"></a></td>
-            
-            
-          </tr>
-        </tbody>
-      </table>
-    </p>
-    <hr width="95%" size="2" class="separcion-entre-pagina">
-      Te invito a visitar<a href="https://github.com/CristianRo292" target="_blank"> Mi github</a> donde encontraras el repositorio de este proyecto
-
-    <br>
-      <h3 id="fila">Tecnologías utilizadas durante el desarrollo del Sitio Web:</h3>  
-      <ul>
-        <li>HTML</li>
-        <li>CSS</li>
-
-      </ul>
-      <h3>Recursos Utilizados</h3>
-      <ol>
-        <li>Laptop</li>
-        <li>Internet</li>
-        <li>Tutorial de la clase</li>
-      </ol>
-      <footer>
-            <!--Aqui se escribe el pie de pagina-->
-            Elaborado por <b>Cristian Rodríguez</b>,  materia: <b>Desarrollo de Aplicaciones Web</b>, <a href="https://github.com/CristianRo292">Enlace a GitHub aquí.</a>
-      </footer>
-
     
+    <div class="grid-3-columnas">
+        <article class="entrada-blog">
+            <h1>Repositorio de GitHub</h1>
+            <!-- CORRECCIÓN 2: Quitamos el width físico para controlarlo con CSS flexible -->
+            <a href="https://github.com/CristianRo292/disenio-app-web-responsibe-web" target="_blank">
+              <img src="imagenes/icnoGithubAdaptado.jpg" alt="Imagen de repositorio Github">
+            </a>
+        </article>
+
+        <article class="entrada-blog">
+            <h1>Actividad Banderas</h1>
+            <a href="banderas-svg.html">
+              <img src="imagenes/banderas-portada.jpg" alt="Imagen de banderas del mundo">
+            </a>
+        </article>
+
+        <article class="entrada-blog">
+            <h1>Prácticas de WRD</h1>
+            <a href="practicas-wrd.html">
+              <img src="imagenes/wrd-portada.jpeg" alt="Imagen de web responsiva">
+            </a>
+        </article>
+    </div>
       
+    <hr width="95%" size="2" class="separcion-entre-pagina">
+   
+    <footer>
+        &copy; Elaborado por <b>Cristian Rodríguez</b>, materia: <b>Desarrollo de Aplicaciones Web</b>, <a href="https://github.com/CristianRo292">Enlace a GitHub aquí.</a>
+    </footer>
   </body>
 </html>

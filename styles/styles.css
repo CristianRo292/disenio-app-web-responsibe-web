@@ -1,40 +1,37 @@
 p {
     color: black;
     font-size: 20px;
-    
 }
-/* h1 {
-    color: white;
-    font-family: Calibri;
-    font-size: 250% ;
 
-} */
 .encabezado{
     background-color:rgba(36, 64, 8, 0.845) ;
     min-height: 200px;
     font-size: 200% ;
 }
-/* .menu{
-    text-align: ;
-} */
+
 .portada{
-    padding: 10%;
+    padding: 5%; /* Reducido un poco para que en móvil no ocupe tanto espacio */
     background-image: url('../imagenes/galaxia-astronomia-portada.jpg');
-    
+    background-size: cover; /* Asegura que la galaxia cubra todo el fondo sin deformarse */
+    background-position: center;
 }
+
 .letras-encabezado{
     color: rgb(250, 246, 246);
     font-family: Calibri;
     font-size: 100%;
-    /* background-color: #00000022; */
 }
+
 body {
-  color: #2A2630;              /* color del texto */
+  color: #2A2630;
   background-color: #e4e8e0;
   font-family: 'IBM Plex Sans', sans-serif;
   font-size: 16px;
   line-height: 1.6;
+  margin: 0;
+  padding: 0;
 }
+
 .tarjeta {
     padding: 3%;
     border: 2px solid #2A2630;
@@ -42,79 +39,62 @@ body {
     box-sizing: border-box;
     background-color:rgba(36, 64, 8, 0.227) ;
 }
-#contenedor-sombra-text{
-    background-color: #00000022;
+
+/* tamaño de imagen maximo, es igual a su contenedro, no puede ser mas grande que su contenedor */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
-/* h1 { font-family: 'Space Grotesk', sans-serif; font-weight: 700; }
- */
-/* .fila {
-    display: flex;
-    gap: 12px;
-    justify-content: space-between;
-    align-items: center;
-    background-color: rgb(79, 150, 70);
-    border-radius: 2%;
-} */
+
+.entrada-blog {
+    background-color: #ffffff;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+
+.grid-3-columnas {
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 20px;
+    padding: 10px;
+}
+
 .rejilla {
-  display: grid;
-  grid-template-columns: 1fr 1fr; /* dos columnas iguales */
-  width: 90%;                     /* ocupa el 90% del ancho */
-  margin: 0 auto;                 /* centrada en la pantalla */
-  gap: 12px;                      /* espacio entre columnas */
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 90%;
+    margin: 0 auto;
+    gap: 12px;
 }
 
-.columna {
-  background-color: rgb(242, 248, 248);
-  color: black;
-  border-radius: 8px;
-  text-align: center;
-  border: 1px solid rgba(0, 0, 0, 0.22);
-  min-height: 200px;              /* altura mínima */
-  padding: 20px;                  /* espacio interno */
+@media (min-width: 768px) {
+    .grid-3-columnas {
+        grid-template-columns: repeat(3, 1fr); /* 3 columnas en computadoras */
+    }
+    .rejilla {
+        grid-template-columns: 1fr 1fr; /* 2 columnas en computadoras */
+    }
 }
 
-.tabla-encabezado {
-  background-color: rgb(100, 162, 61);
-  color: black;
-  border-radius: 5px;
-  text-align: center;
-  border: 1px solid rgba(0, 0, 0, 0.22);
-  padding: 10px;
-}
-
-.celda-tabla {
-  background-color: rgb(208, 218, 202);
-  color: black;
-  border-radius: 5px;
-  text-align: center;
-  border: 1px solid rgba(0, 0, 0, 0.22);
-  padding: 10px;
-}
 
 table {
-  width: 95%;                /* ocupa el 90% del ancho */
-  margin: 20px auto;          /* centrada en la pantalla */
-  border-collapse: collapse;  /* bordes unidos */
+  width: 95%;
+  margin: 20px auto;
+  border-collapse: collapse;
   font-family: Arial, sans-serif;
   border-radius: 5px;
 }
-
-thead {
-  background-color: rgb(59, 101, 33); /* color encabezado */
-  color: white;
-  border-radius: 5px;
-}
-
-th, td {
-  border: 1px solid rgba(0, 0, 0, 0.22);
-  padding: 12px;
-  text-align: center;
-  border-radius: 5px;
-}
-
+thead { background-color: rgb(59, 101, 33); color: white; }
+th, td { border: 1px solid rgba(0, 0, 0, 0.22); padding: 12px; text-align: center; }
 footer {
-  background-color: rgb(136, 168, 122);
-  color: white;
-  text-align: center;
-  padding: 10px;
-}
+   background-color: rgb(136, 168, 122); 
+   color: white; text-align: center; 
+   padding: 10px;
+   width: 100%; 
+  }
+
