@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="styles/styles.css">
+        <title>Registro . Agenda Web</title>
+    </head>
+    <body>
+        <header class="encabezado">
+            <h2 style="float: right; font-size: 50%; margin: 20px;"><a href="index.html">Inicio</a></h2>
+            <!--Aqui se escribe el encabezado, barra superior-->
+            <h1 class="letras-encabezado">Agenda Web - Registro de Eventos</h1>
+            <div id="menu-opciones">
+                
+            </div>
+        </header>
+        <hr>
+        <main>
+            <!--Aqui se escribe el cuerpo de la pagina web-->
+            <form method="post" action="php/guardar.php">
+                <label for="titulo">
+                    Nombre del Evento
+                    <input type="text" name="titulo-event" placeholder="Evento" autofocus="true">
+                </label>
+                <input type="date" name="Fecha">
+                <textarea name="Descripcion" ></textarea>
+                <button type="submit">Agregar</button>
+
+            </form>
+            <hr width="95%" size="2" class="separcion-entre-pagina">
+            <table>
+                <thead >
+                    <tr>
+                        <th>Evento</th>
+                        <th>Fecha</th>
+                    </tr>
+                </thead>
+                <tbody >
+                    <tr >
+                        <td>Quiz PHP</td>
+                        <td>20-09-26</td>
+                    </tr>
+                    <tr>
+                        <td>Publicar Codigo</td>
+                        <td>31-08-26</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="rejilla">
+                <div class="columna">
+                    <img src="imagenes/pato_amistoso.jpg" alt="Pato amistoso">
+                </div>
+                <div class="columna">
+                    <img src="imagenes/patoDarbeigere.jpg" alt="Pato malo">
+                </div>
+                
+            </div>
+        </main>
+        <hr>
+        <footer>
+            <!--Aqui se escribe el pie de pagina-->
+            Elaborado por <b>Cristian Rodríguez</b>,  materia: <b>Desarrollo de Aplicaciones Web</b>, <a href="https://github.com/CristianRo292">Enlace a GitHub aquí.</a>
+        </footer>
+    </body>
+
+</html>
