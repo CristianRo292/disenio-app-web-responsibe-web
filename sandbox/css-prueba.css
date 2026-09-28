@@ -1,0 +1,387 @@
+/* ==========================================
+   1. VARIABLES Y CONFIGURACIÓN GLOBAL
+   ========================================== */
+:root {
+  /* Paleta unificada (Verde elegante y profesional) */
+  --color-fondo: #e4e8e0;
+  --color-superficie: #ffffff;
+  --color-texto-principal: #2A2630;
+  --color-texto-secundario: #525c4d;
+  --color-texto-placeholder: #8a9485;
+  --color-acento: #335c1f;
+  --color-acento-hover: #264717;
+  --color-borde: #d0d9cb;
+  --color-borde-focus: #335c1f;
+  --color-portada-overlay: rgba(0, 0, 0, 0.403);
+  --color-tarjeta-bg: rgba(36, 64, 8, 0.227);
+
+  /* TIPOGRAFÍA: Calibri para títulos (Marca personal), IBM Plex Sans para cuerpo */
+  --fuente-titulos: 'Calibri', 'Candara', 'Segoe', 'Segoe UI', Optima, Arial, sans-serif;
+  --fuente-cuerpo: 'IBM Plex Sans', sans-serif;
+
+  /* Espaciado consistente */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 0.5rem;
+  --space-lg: 0.5rem;
+  
+  /* Transiciones suaves */
+  --transicion-suave: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: var(--color-texto-principal);
+  background-color: var(--color-fondo);
+  font-family: var(--fuente-cuerpo);
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Ajuste del párrafo global para que sea legible pero no rompa el formulario */
+p {
+  color: var(--color-texto-principal);
+  font-size: 1.125rem; /* ~18px, un punto medio elegante */
+  margin-top: 0;
+}
+
+/* ==========================================
+   2. ESTILOS DE LA PÁGINA PRINCIPAL
+   ========================================== */
+.portada {
+  padding: 5%;
+  background-image: url('../imagenes/galaxia-astronomia-portada.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column; /* Organiza los elementos en columna vertical */
+  align-items: center;    /* Centra horizontalmente los hijos */
+  justify-content: center;/* Centra verticalmente si el contenedor tiene una altura definida */
+  text-align: center;
+  
+  height: 700px;
+  /* height: 75%; */
+}
+
+.portada-contenido {
+  background-color: var(--color-portada-overlay);
+  padding: 20px;
+  border-radius: 8px; /* Toque sutil de modernidad */
+  width: 90%;
+}
+
+.titulo-portada {
+  font-family: var(--fuente-titulos); /* CALIBRI (Marca personal) */
+  font-size: 2.5rem;
+  color: #ffffff;
+  margin: 0 0 var(--space-sm) 0;
+  font-weight: 700;
+}
+
+.letras-encabezado {
+  color: rgb(250, 246, 246);
+  font-family: var(--fuente-titulos); /* CALIBRI */
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: var(--space-xs);
+}
+
+.separador-portada {
+  border: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  margin: 15px 0;
+}
+
+.separador-seccion {
+  width: 95%;
+  margin: 30px auto;
+  border: 0;
+  border-top: 2px solid var(--color-borde);
+}
+
+.tarjeta {
+  padding: 1rem; /* Equivalente visual a 3% pero más estable */
+  border: 2px solid var(--color-texto-principal);
+  margin: 20px auto;
+  max-width: 95%;
+  background-color: var(--color-tarjeta-bg);
+  border-radius: 8px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;
+  margin: 0 auto;
+}
+
+.entrada-blog {
+  background-color: var(--color-superficie);
+  padding: 15px;
+  margin: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: var(--transicion-suave);
+}
+
+.entrada-blog:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+}
+
+.entrada-blog h1 {
+  font-family: var(--fuente-titulos); /* CALIBRI */
+  font-size: 1.5rem;
+  color: var(--color-texto-principal);
+  margin-bottom: 15px;
+}
+
+.grid-3-columnas {
+  display: grid;
+  grid-template-columns: 1fr; 
+  gap: 20px;
+  padding: 10px;
+  max-width: 95%;
+  margin: 0 auto;
+}
+
+/* ==========================================
+   3. ESTILOS DEL FORMULARIO (Integrados)
+   ========================================== */
+.contenedor-principal {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--space-md);
+}
+
+.tarjeta-formulario {
+  background-color: var(--color-superficie);
+  border: 1px solid var(--color-borde);
+  border-radius: 16px;
+  box-shadow: 0 12px 32px rgba(29, 36, 25, 0.06);
+  width: 100%;
+  max-width: 560px;
+  padding: var(--space-lg);
+}
+
+.encabezado-formulario {
+  margin-bottom: var(--space-md);
+  text-align: center;
+}
+
+.encabezado-formulario h1 {
+  font-family: var(--fuente-titulos); /* CALIBRI */
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: var(--color-texto-principal);
+  margin: 0 0 var(--space-xs) 0;
+}
+
+/* Override específico para que el párrafo del formulario no sea gigante */
+.encabezado-formulario p {
+  color: var(--color-texto-secundario);
+  font-size: 0.95rem;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.formulario-agenda {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.grupo-formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.grupo-formulario label {
+  font-family: var(--fuente-cuerpo);
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: var(--color-texto-principal);
+  letter-spacing: 0.01em;
+}
+
+.grupo-formulario input,
+.grupo-formulario select,
+.grupo-formulario textarea {
+  font-family: var(--fuente-cuerpo);
+  font-size: 0.95rem;
+  padding: 0.75rem 1rem;
+  border: 1.5px solid var(--color-borde);
+  border-radius: 10px;
+  background-color: var(--color-superficie);
+  color: var(--color-texto-principal);
+  transition: var(--transicion-suave);
+  outline: none;
+  width: 100%;
+}
+
+.grupo-formulario input::placeholder,
+.grupo-formulario textarea::placeholder {
+  color: var(--color-texto-placeholder);
+  font-weight: 400;
+}
+
+.grupo-formulario input:focus,
+.grupo-formulario select:focus,
+.grupo-formulario textarea:focus {
+  border-color: var(--color-borde-focus);
+  box-shadow: 0 0 0 4px rgba(51, 92, 31, 0.08);
+}
+
+.grupo-formulario select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%23525c4d' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  padding-right: 2.5rem;
+  cursor: pointer;
+}
+
+.grupo-formulario textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.fila-doble {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-sm);
+}
+
+.acciones-formulario {
+  display: flex;
+  gap: var(--space-sm);
+  margin-top: var(--space-sm);
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--color-borde);
+}
+
+.btn-primario,
+.btn-secundario {
+  font-family: var(--fuente-cuerpo);
+  font-weight: 600;
+  font-size: 0.95rem;
+  border-radius: 10px;
+  padding: 0.85rem 1.5rem;
+  cursor: pointer;
+  transition: var(--transicion-suave);
+  letter-spacing: 0.01em;
+}
+
+.btn-primario {
+  background-color: var(--color-acento);
+  color: #ffffff;
+  border: 1.5px solid var(--color-acento);
+  flex: 2;
+}
+
+.btn-primario:hover {
+  background-color: var(--color-acento-hover);
+  border-color: var(--color-acento-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(51, 92, 31, 0.2);
+}
+
+.btn-primario:active {
+  transform: translateY(0);
+}
+
+.btn-secundario {
+  background-color: transparent;
+  color: var(--color-texto-secundario);
+  border: 1.5px solid var(--color-borde);
+  flex: 1;
+}
+
+.btn-secundario:hover {
+  background-color: var(--color-fondo);
+  color: var(--color-texto-principal);
+  border-color: var(--color-texto-secundario);
+}
+
+/* ==========================================
+   4. TABLAS Y FOOTER (Originales preservados)
+   ========================================== */
+table {
+  width: 95%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  font-family: var(--fuente-cuerpo); /* Unificado a IBM Plex Sans */
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+thead { 
+  background-color: #3b6521; /* Equivalente hex de rgb(59, 101, 33) */
+  color: white; 
+}
+
+th, td { 
+  border: 1px solid rgba(0, 0, 0, 0.22); 
+  padding: 12px; 
+  text-align: center; 
+}
+
+footer {
+  background-color: #88a87a; /* Equivalente hex de rgb(136, 168, 122) */
+  color: white; 
+  text-align: center; 
+  padding: 20px 10px;
+  width: 100%; 
+}
+
+footer a {
+  color: white;
+  text-decoration: underline;
+  transition: var(--transicion-suave);
+}
+
+footer a:hover {
+  color: var(--color-superficie);
+}
+
+/* ==========================================
+   5. RESPONSIVIDAD (Móviles)
+   ========================================== */
+@media (min-width: 768px) {
+  .grid-3-columnas {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .titulo-portada {
+    font-size: 1.8rem; /* Ajuste para móviles */
+  }
+  
+  .fila-doble {
+    grid-template-columns: 1fr;
+  }
+  
+  .acciones-formulario {
+    flex-direction: column-reverse;
+  }
+  
+  .btn-primario,
+  .btn-secundario {
+    width: 100%;
+    text-align: center;
+  }
+}
